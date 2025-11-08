@@ -14,7 +14,7 @@ namespace Calculator
         
         public Calculator(float a, float b, string op) 
         {
-            this.a = a; this.b = b; this.op = op;
+            this.a = a; this.b = b; this.op = op.Trim();
         }
         public float Calculate() {
             switch (op)
