@@ -30,9 +30,8 @@ namespace Calculator
                     
                 case "/":
                    return Division(a, b);
-                    
                 default:
-                    throw new Exception("Calculator requires mathematical operator");
+                    throw new ArgumentException("Calculator requires mathematical operator");
             }
         }
         public float Addition(float a,float b) 
