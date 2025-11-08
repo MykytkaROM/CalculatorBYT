@@ -1,6 +1,5 @@
 using Calculator;
-namespace CalculatorTests;
-
+namespace CalculatorTests
 {
     public class Tests
     {
@@ -12,7 +11,7 @@ namespace CalculatorTests;
         [Test]
         public void TestCalculatorMissingOpperator()
         {
-
+            
         }
 
         [Test]

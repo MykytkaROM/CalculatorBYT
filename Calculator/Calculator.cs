@@ -8,43 +8,52 @@ namespace Calculator
 {
     public class Calculator
     {
+        private readonly float a;
+        private readonly float b;
+        private readonly string op;
         
-        public float result;
         public Calculator(float a, float b, string op) 
         {
+            this.a = a; this.b = b; this.op = op;
+        }
+        public float Calculate() {
             switch (op)
             {
                 case "+":
-                    Addition(a, b);
-                    break;
+                    return Addition(a, b);
+                   
                 case "-":
-                    Subtraction(a,b);
-                    break;
+                   return Subtraction(a, b);
+                    
                 case "*":
-                    Multiplication(a,b);
-                    break;
+                   return Multiplication(a, b);
+                    
                 case "/":
-                    Division(a,b);
-                    break;
+                   return Division(a, b);
+                    
                 default:
                     throw new Exception("Calculator requires mathematical operator");
             }
         }
-        public void Addition(float a,float b) 
+        public float Addition(float a,float b) 
         {
-            
+            return a + b;
         }
-        public void Subtraction(float a, float b) 
+        public float Subtraction(float a, float b) 
         {
-
+            return a - b;
         }
-        public void Division(float a, float b) 
+        public float Division(float a, float b) 
         {
-            
+            if (b == 0) 
+            {
+                throw new DivideByZeroException("Cannot divide by zero.");
+            }
+            return a / b;
         }
-        public void Multiplication(float a, float b)
+        public float Multiplication(float a, float b)
         {
-
+            return a * b;
         }
     }
 }
